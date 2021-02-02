@@ -24,9 +24,9 @@ public class DadosController implements WebMvcConfigurer {
 
 	@PostMapping("/dados")
 	@ResponseStatus(value = HttpStatus.CREATED)
-	public DadosTable criar(@RequestBody DadosTable objetoManutencao) {
-		repository.save(objetoManutencao);
-		return objetoManutencao;
+	public DadosTable criar(@RequestBody DadosTable obj) {
+		repository.save(obj);
+		return obj;
 	}
 	
 }
